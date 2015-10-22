@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IlyaCSDN</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="section_titles">
+        <item>精品博客</item>
+        <item>待续</item>
+    </string-array>
+</resources>
