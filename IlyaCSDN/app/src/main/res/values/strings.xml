@@ -7,4 +7,85 @@
         <item>精品博客</item>
         <item>待续</item>
     </string-array>
+
+    <string-array name="blog_zhanghongyang">
+        <item>lmj623565791</item>
+        <item>张鸿洋</item>
+        <item>生命不息，奋斗不止，万事起于忽微，量变引起质变</item>
+        <item>http://avatar.csdn.net/F/F/5/1_lmj623565791.jpg</item>
+        <item>http://blog.csdn.net/lmj623565791</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="yayun">
+        <item>yayun0516</item>
+        <item>张亚运</item>
+        <item>Technology changes life，Code writes everything.（小研快毕业，求引荐工作！谢谢）</item>
+        <item>http://avatar.csdn.net/D/6/D/1_yayun0516.jpg</item>
+        <item>http://blog.csdn.net/yayun0516</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="wwj">
+        <item>wwj_748</item>
+        <item>巫文杰</item>
+        <item>一个人走到任何境地全都是因为自己。</item>
+        <item>http://avatar.csdn.net/C/C/8/1_wwj_748.jpg</item>
+        <item>http://blog.csdn.net/wwj_748</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="coder_pig">
+        <item>coder_pig</item>
+        <item>庄培杰</item>
+        <item>时间一天天过去，我们终会因我们的努力或堕落变得丰富或苍白</item>
+        <item>http://avatar.csdn.net/C/2/C/1_zpj779878443.jpg</item>
+        <item>http://blog.csdn.net/coder_pig</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="gao_chun">
+        <item>gao_chun</item>
+        <item>高纯</item>
+        <item>一 大 坨 代 码 ！</item>
+        <item>http://avatar.csdn.net/8/1/E/1_gao_chun.jpg</item>
+        <item>http://blog.csdn.net/gao_chun</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="jiangwei0910410003">
+        <item>jiangwei0910410003</item>
+        <item>姜维</item>
+        <item>jiangwei0910410003的专栏</item>
+        <item>http://avatar.csdn.net/7/1/0/1_jiangwei0910410003.jpg</item>
+        <item>http://blog.csdn.net/jiangwei0910410003</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="guolin_blog">
+        <item>guolin_blog</item>
+        <item>郭霖</item>
+        <item>每当你在感叹，如果有这样一个东西就好了的时候，请注意，其实这是你的机会</item>
+        <item>http://avatar.csdn.net/8/B/B/1_sinyu890807.jpg</item>
+        <item>http://blog.csdn.net/guolin_blog</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="singwhatiwanna">
+        <item>singwhatiwanna</item>
+        <item>任玉刚</item>
+        <item>有创新精神的Android技术分享者</item>
+        <item>http://avatar.csdn.net/0/2/C/1_singwhatiwanna.jpg</item>
+        <item>http://blog.csdn.net/singwhatiwanna</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="cym492224103">
+        <item>cym492224103</item>
+        <item>陈宇明</item>
+        <item>分享既是快乐！更多源码请查看javaapk.com.</item>
+        <item>http://avatar.csdn.net/F/A/3/1_cym492224103.jpg</item>
+        <item>http://blog.csdn.net/cym492224103</item>
+        <item>android</item>
+    </string-array>
 </resources>
