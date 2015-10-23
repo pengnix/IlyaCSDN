@@ -3,11 +3,14 @@ package ilya.pengnix.com.ilyacsdn.utils;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.http.AndroidHttpClient;
 import android.os.Build;
 
 import com.android.volley.Network;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.BasicNetwork;
+import com.android.volley.toolbox.DiskBasedCache;
+import com.android.volley.toolbox.HttpClientStack;
 import com.android.volley.toolbox.HttpStack;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.Volley;
@@ -35,7 +38,7 @@ public class ICVolley extends Volley{
             } else {
                 // Prior to Gingerbread, HttpUrlConnection was unreliable.
                 // See: http://android-developers.blogspot.com/2011/09/androids-http-clients.html
-                //stack = new HttpClientStack(AndroidHttpClient.newInstance(userAgent));
+                stack = new HttpClientStack(AndroidHttpClient.newInstance(userAgent));
             }
         }
 
@@ -45,15 +48,15 @@ public class ICVolley extends Volley{
         if (maxDiskCacheBytes <= -1)
         {
             // No maximum size specified
-            //queue = new RequestQueue(new DiskBasedCache(cacheDir), network);
+            queue = new RequestQueue(new DiskBasedCache(cacheFile), network);
         }
         else
         {
             // Disk cache size specified
-            //queue = new RequestQueue(new DiskBasedCache(cacheDir, maxDiskCacheBytes), network);
+            queue = new RequestQueue(new DiskBasedCache(cacheFile, maxDiskCacheBytes), network);
         }
 
-        //queue.start();
+        queue.start();
 
         return queue;
     }

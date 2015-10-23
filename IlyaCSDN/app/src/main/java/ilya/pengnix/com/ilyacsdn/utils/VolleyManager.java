@@ -1,4 +1,4 @@
-package ilya.pengnix.com.ilyacsdn;
+package ilya.pengnix.com.ilyacsdn.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -6,6 +6,8 @@ import android.util.LruCache;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
+
+import java.io.File;
 
 /**
  * Created by Avazu on 2015/10/23.
@@ -36,7 +38,8 @@ public class VolleyManager {
 
     private RequestQueue getImageRequestQueue(){
         if(mImageRequestQueue == null){
-
+            mImageRequestQueue = ICVolley.newRequestQueue(mContext.getApplicationContext(),
+                    new File(FileUtil.getVolleyDir(mContext),VOLLEY_DIR_IMAGE),MAX_DISK_CACHE_IMAGE);
         }
         return mImageRequestQueue;
     }
