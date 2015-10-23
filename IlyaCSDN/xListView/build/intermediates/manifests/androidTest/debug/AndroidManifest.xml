@@ -13,20 +13,8 @@
         android:label="Tests for me.maxwin.test"
         android:targetPackage="me.maxwin.test" />
 
-    <application
-        android:icon="@mipmap/xlistview_arrow"
-        android:label="@string/app_name" >
+    <application>
         <uses-library android:name="android.test.runner" />
-
-        <activity
-            android:name="me.maxwin.XListViewActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

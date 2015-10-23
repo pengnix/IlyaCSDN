@@ -1,13 +1,14 @@
 package me.maxwin;
 
-import java.util.ArrayList;
-
-import me.maxwin.view.XListView;
-import me.maxwin.view.XListView.IXListViewListener;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ArrayAdapter;
+
+import java.util.ArrayList;
+
+import me.maxwin.view.XListView;
+import me.maxwin.view.XListView.IXListViewListener;
 
 public class XListViewActivity extends Activity implements IXListViewListener {
 	private XListView mListView;

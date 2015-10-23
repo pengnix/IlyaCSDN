@@ -7,6 +7,6 @@ public class CategoryManager {
 
     public class CategoryName{
         public static final String ANDROID = "android";
-        public static final String MOBILE = "ÒÆ¶¯¿ª·¢";
+        public static final String MOBILE = "mobile";
     }
 }
