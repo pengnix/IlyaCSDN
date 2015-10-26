@@ -39,10 +39,9 @@ public class HotBlogerListFragment extends Fragment{
     private void setupView(View root){
         mListView = (XListView)root.findViewById(R.id.bloger_list_view);
         mAdapter = new BloggerListAdapter(getActivity(),mBlogerList);
-        Log.i("pengnix","size is " +mBlogerList.size());
+        Log.i("pengnix", "size is " + mBlogerList.size());
+        mListView.NotRefreshAtBegin();
         mListView.setAdapter(mAdapter);
-        mListView.setPullLoadEnable(false);
-        mListView.setPullRefreshEnable(false);
     }
 
     private void initData(){

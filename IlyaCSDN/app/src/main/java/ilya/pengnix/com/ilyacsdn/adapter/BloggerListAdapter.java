@@ -1,6 +1,8 @@
 package ilya.pengnix.com.ilyacsdn.adapter;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,21 +68,30 @@ public class BloggerListAdapter extends BaseAdapter{
 
         holder.blogTitle.setText(getItem(position).getTitle());
         holder.blogDesc.setText(getItem(position).getDescription());
-        mImageLoader.get(getItem(position).getImgUrl(),getImageListener(holder.blogger,context),(int)itemHeight,(int)itemHeight);
-
+        holder.blogger.setTag(getItem(position).getImgUrl());
+        holder.blogger.setImageResource(R.drawable.ic_launcher);
+        mImageLoader.get(getItem(position).getImgUrl(),getImageListener(holder.blogger,getItem(position).getImgUrl(),context),(int)itemHeight,(int)itemHeight);
         return convertView;
     }
 
-    private ImageLoader.ImageListener getImageListener(final ImageView imageView , final Context context){
+    private ImageLoader.ImageListener getImageListener(final ImageView imageView,final String imgUrl , final Context context){
         return new ImageLoader.ImageListener() {
             @Override
             public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
-                imageView.setImageBitmap(response.getBitmap());
+                if(response.getBitmap() != null){
+                    if(imageView.getTag() != null && imageView.getTag().equals(imgUrl)){//防错位
+                        imageView.setImageBitmap(response.getBitmap());
+                    }
+                    Log.i("pengnix",""+ response.getBitmap());
+                } else {
+                    imageView.setImageBitmap(BitmapFactory.decodeResource(context.getResources(),R.drawable.ic_launcher));
+                }
+
             }
 
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                imageView.setImageBitmap(BitmapFactory.decodeResource(context.getResources(),R.drawable.ic_launcher));
             }
         };
     }

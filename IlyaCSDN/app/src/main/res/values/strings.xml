@@ -88,4 +88,31 @@
         <item>http://blog.csdn.net/cym492224103</item>
         <item>android</item>
     </string-array>
+
+    <string-array name="eclipsexys">
+        <item>eclipsexys</item>
+        <item>徐宜生</item>
+        <item>路漫漫其修远兮 吾将上下而求索</item>
+        <item>http://avatar.csdn.net/A/6/8/1_x359981514.jpg</item>
+        <item>http://blog.csdn.net/eclipsexys</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="zhaokaiqiang1992">
+        <item>zhaokaiqiang1992</item>
+        <item>赵凯强</item>
+        <item>专注Android移动开发，热爱分享，支持开源</item>
+        <item>http://avatar.csdn.net/C/6/8/1_bz419927089.jpg</item>
+        <item>http://blog.csdn.net/zhaokaiqiang1992</item>
+        <item>android</item>
+    </string-array>
+
+    <string-array name="xiaanming">
+        <item>cym492224103</item>
+        <item>夏安明</item>
+        <item>专注移动互联网开发，注重实战，是软件开发的一柄利剑</item>
+        <item>http://avatar.csdn.net/4/F/6/1_xiaanming.jpg</item>
+        <item>http://blog.csdn.net/xiaanming</item>
+        <item>android</item>
+    </string-array>
 </resources>

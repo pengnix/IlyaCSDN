@@ -44,5 +44,9 @@ public class BlogerManager {
         list.add(parseBlogger(context.getResources().getStringArray(R.array.singwhatiwanna)));
         list.add(parseBlogger(context.getResources().getStringArray(R.array.cym492224103)));
 
+        list.add(parseBlogger(context.getResources().getStringArray(R.array.eclipsexys)));
+        list.add(parseBlogger(context.getResources().getStringArray(R.array.zhaokaiqiang1992)));
+        list.add(parseBlogger(context.getResources().getStringArray(R.array.xiaanming)));
+
     }
 }

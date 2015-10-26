@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IlyaCSDN.iml" filepath="$PROJECT_DIR$/IlyaCSDN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XListView-Android/XListView-Android.iml" filepath="$PROJECT_DIR$/XListView-Android/XListView-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-volley/android-volley.iml" filepath="$PROJECT_DIR$/android-volley/android-volley.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xListView/xListView.iml" filepath="$PROJECT_DIR$/xListView/xListView.iml" />
     </modules>
   </component>
 </project>
