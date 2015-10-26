@@ -27,6 +27,8 @@ public class VolleyManager {
 
     private VolleyManager(Context context){
         this.mContext = context;
+        mImageRequestQueue = getImageRequestQueue();
+        mImageLoader = getImageLoader();
     }
 
     public static synchronized VolleyManager getmInstance(Context context){
@@ -46,7 +48,7 @@ public class VolleyManager {
 
     public ImageLoader getImageLoader(){
         if(mImageLoader == null){
-
+            mImageLoader = new ImageLoader(mImageRequestQueue,new LruBitmapCache());
         }
         return mImageLoader;
     }
