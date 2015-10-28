@@ -1,5 +1,7 @@
 package ilya.pengnix.com.ilyacsdn.utils;
 
+import android.text.TextUtils;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -15,10 +17,12 @@ import ilya.pengnix.com.ilyacsdn.bean.BlogItem;
  */
 public class JsoupUtil {
     private static final String BLOG_URL = "http://blog.csdn.net";
+
     public static List<BlogItem> getBlogItemList(String str){
         List<BlogItem> list = new ArrayList<BlogItem>();
         Document doc  = Jsoup.parse(str);
         Elements blogList = doc.getElementsByClass("article_item");
+        //Elements blogList = doc.select("article_item").select("list_item");
         //Log.i("pengnix3","size = " +blogList.size());
         for(Element blogItem: blogList){
             BlogItem item = new BlogItem();
@@ -35,5 +39,12 @@ public class JsoupUtil {
             //Log.i("pengnix3","title = " +title);
         }
         return list;
+    }
+
+    public static String getContent(String str){
+        if(TextUtils.isEmpty(str)){
+            return null;
+        }
+        return null;
     }
 }
