@@ -47,7 +47,7 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
         mListView = (XListView)findViewById(R.id.listview_blog);
     }
 
-    private void initListView(int page){
+    private void initListView(){
 
     }
 

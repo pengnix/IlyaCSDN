@@ -115,4 +115,8 @@
         <item>http://blog.csdn.net/xiaanming</item>
         <item>android</item>
     </string-array>
+
+    <string name="blog_title">Cocos2d-x 3.2示例UserDefaultTest（用户默认配置）</string>
+    <string name="blog_create_date">2014-08-08 17:54|141人阅读</string>
+    <string name="blog_read_times">1</string>
 </resources>
