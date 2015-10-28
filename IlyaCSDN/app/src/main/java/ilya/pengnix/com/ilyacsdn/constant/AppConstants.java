@@ -5,6 +5,6 @@ package ilya.pengnix.com.ilyacsdn.constant;
  */
 public class AppConstants {
 
-    public final static String CSDN_BASE_URL = "http://blog.csdn.net";
+    public final static String CSDN_BASE_URL = "http://blog.csdn.net/";
 
 }
