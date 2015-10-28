@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name="ilya.pengnix.com.ilyacsdn.BlogListActivity"/>
+        <activity android:name="ilya.pengnix.com.ilyacsdn.BlogContentActivity"/>
     </application>
 
 </manifest>

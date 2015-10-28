@@ -1,7 +1,5 @@
 package ilya.pengnix.com.ilyacsdn.utils;
 
-import android.util.Log;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -21,7 +19,7 @@ public class JsoupUtil {
         List<BlogItem> list = new ArrayList<BlogItem>();
         Document doc  = Jsoup.parse(str);
         Elements blogList = doc.getElementsByClass("article_item");
-        Log.i("pengnix3","size = " +blogList.size());
+        //Log.i("pengnix3","size = " +blogList.size());
         for(Element blogItem: blogList){
             BlogItem item = new BlogItem();
             String title = blogItem.select("h1").text();
@@ -34,7 +32,7 @@ public class JsoupUtil {
             item.setDate(date);
             item.setLink(link);
             list.add(item);
-            Log.i("pengnix3","title = " +title);
+            //Log.i("pengnix3","title = " +title);
         }
         return list;
     }

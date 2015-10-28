@@ -1,10 +1,10 @@
 package ilya.pengnix.com.ilyacsdn;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -60,6 +60,7 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
         mAdapter = new BlogListAdapter(this);
         mListView = (XListView)findViewById(R.id.listview_blog);
         mListView.setAdapter(mAdapter);
+        mListView.setOnItemClickListener(this);
         initListView();
     }
 
@@ -98,7 +99,7 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
     private OnResponseListener mOnResponseListener = new OnResponseListener() {
         @Override
         public void Response(String result) {
-            Log.i("pengnix3","result = " +result);
+            //Log.i("pengnix3","result = " +result);
             if(result != null){
                 List<BlogItem> list = JsoupUtil.getBlogItemList(result);
                 mAdapter.setList(list);
@@ -109,6 +110,10 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        BlogItem item = (BlogItem)mAdapter.getItem(position - 1);
+        Intent i = new Intent(BlogListActivity.this,BlogContentActivity.class);
+        i.putExtra("blogItem",item);
+        startActivity(i);
+        //Log.i("pengnix3","item is " + item.getTitle());
     }
 }
