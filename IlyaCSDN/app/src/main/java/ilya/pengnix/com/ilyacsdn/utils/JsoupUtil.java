@@ -8,6 +8,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import ilya.pengnix.com.ilyacsdn.bean.BlogItem;
@@ -45,6 +46,24 @@ public class JsoupUtil {
         if(TextUtils.isEmpty(str)){
             return null;
         }
-        return null;
+        Element detailElement = Jsoup.parse(str).getElementsByClass("details").get(0);
+        detailElement.select("script").remove();
+        if (detailElement.getElementById("digg") != null) {
+            detailElement.getElementById("digg").remove();
+        }
+        if (detailElement.getElementsByClass("tag2box") != null) {
+            detailElement.getElementsByClass("tag2box").remove();
+        }
+
+        detailElement.getElementsByClass("article_manage").remove();
+        detailElement.getElementsByTag("h1").tagName("h2");
+        Iterator<?> localIterator = detailElement.select("pre[name=code]").iterator();
+        while (true) {
+            if (!localIterator.hasNext())
+                return detailElement.toString();
+            Element localElement2 = (Element) localIterator.next();
+            localElement2.attr("class", "brush: java; gutter: false;");
+            //Log.i("CSNDBlog_JsoupUtil", "codeNode.text()" + localElement2.text());
+        }
     }
 }
