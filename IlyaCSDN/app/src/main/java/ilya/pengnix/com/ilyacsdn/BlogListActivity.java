@@ -18,13 +18,15 @@ import ilya.pengnix.com.ilyacsdn.task.OnResponseListener;
 import ilya.pengnix.com.ilyacsdn.utils.JsoupUtil;
 import ilya.pengnix.com.ilyacsdn.utils.URLUtil;
 import me.maxwin.view.XListView;
+import me.maxwin.view.IXListViewLoadMore;
 
 /**
  * Created by Avazu on 2015/10/26.
  */
-public class BlogListActivity extends Activity implements AdapterView.OnItemClickListener{
+public class BlogListActivity extends Activity implements AdapterView.OnItemClickListener, IXListViewLoadMore{
 
     public static final int MSG_PRELOAD_DATA = 1000;
+    public static final int MSG_LOADMORE_DATA = 1001;
     private XListView mListView;
     private Blogger mBlogger;
     private String mBlogerBaseUrl;
@@ -65,6 +67,7 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
     }
 
     private void initListView(){
+        mListView.setPullLoadEnable(this);
         mHandlder.sendEmptyMessage(MSG_PRELOAD_DATA);
     }
 
@@ -88,6 +91,8 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
                     //Log.i("pengnix3","MSG_PRELOAD_DATA");
                     getData(mPage);
                     break;
+                case MSG_LOADMORE_DATA:
+                    getData(mPage);
                 default:
                     break;
             }
@@ -102,7 +107,7 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
             //Log.i("pengnix3","result = " +result);
             if(result != null){
                 List<BlogItem> list = JsoupUtil.getBlogItemList(result);
-                mAdapter.setList(list);
+                mAdapter.addList(list);
             }
         }
     };
@@ -115,5 +120,15 @@ public class BlogListActivity extends Activity implements AdapterView.OnItemClic
         i.putExtra("blogItem",item);
         startActivity(i);
         //Log.i("pengnix3","item is " + item.getTitle());
+    }
+
+    @Override
+    public void onLoadMore() {
+        loadMore();
+    }
+
+    private void loadMore(){
+        mPage++;
+        mHandlder.sendEmptyMessage(MSG_LOADMORE_DATA);
     }
 }
