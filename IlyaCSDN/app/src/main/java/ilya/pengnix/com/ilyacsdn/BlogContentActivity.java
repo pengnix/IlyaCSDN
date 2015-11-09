@@ -32,6 +32,7 @@ public class BlogContentActivity extends Activity implements OnResponseListener{
     }
 
     private void init(){
+        //test
         mBlogItem = (BlogItem) getIntent().getSerializableExtra("blogItem");
         if(mBlogItem != null){
             mUrl = mBlogItem.getLink();
